@@ -9,6 +9,11 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.html$/,
+                exclude: [path.resolve(__dirname, 'src/index.html')],
+                use: [{ loader: 'ngtemplate-loader' }, { loader: 'html-loader' }]
+            },
+            {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: [{ loader: 'babel-loader' }]
