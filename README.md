@@ -9,9 +9,13 @@ git clone https://github.com/Atekon/workshop-fe-seium18.git
 ```
 
 If you have [node](https://nodejs.org/en/) installed you can now
+
 ```
 npm install
 ```
+
 which will install all the required dependencies.
 
 We will use [Webpack](https://webpack.js.org/) to generate a bundle/serve the application
+
+You may see the web app progress [here](./BRANCHES.md)
