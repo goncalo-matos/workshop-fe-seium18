@@ -25,7 +25,7 @@ const plugins = [extractSassPlugin, uglifyPlugin, loaderOptionsPlugin];
 module.exports = webpackMerge.smart(common, {
     entry: {
         bundle: ['./src/index.js'],
-        vendor: ['angular']
+        vendor: ['angular', 'angular-route']
     },
     module: {
         rules: [
