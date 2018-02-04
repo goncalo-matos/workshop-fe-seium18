@@ -14,10 +14,19 @@ const uglifyPlugin = new webpack.optimize.UglifyJsPlugin({
 const loaderOptionsPlugin = new webpack.LoaderOptionsPlugin({
     minimize: true
 });
+const commonChunksPlugin = new webpack.optimize.CommonsChunkPlugin({
+    name: 'vendor',
+    filename: 'vendor_[chunkhash].js',
+    minChunks: Infinity
+});
 
 const plugins = [extractSassPlugin, uglifyPlugin, loaderOptionsPlugin];
 
 module.exports = webpackMerge.smart(common, {
+    entry: {
+        bundle: ['./src/index.js'],
+        vendor: ['angular']
+    },
     module: {
         rules: [
             {

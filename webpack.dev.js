@@ -2,6 +2,7 @@ const webpackMerge = require('webpack-merge');
 const common = require('./webpack.common');
 
 module.exports = webpackMerge.smart(common, {
+    entry: './src/index.js',
     devtool: 'eval-source-map',
     devServer: {
         contentBase: './dist'
