@@ -1,7 +1,10 @@
 import templateUrl from './home.html';
 
 const HomeComponent = {
-    templateUrl
+    templateUrl,
+    bindings: {
+        posts: '<'
+    }
 };
 
 export { HomeComponent };
