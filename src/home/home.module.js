@@ -1,5 +1,7 @@
 import angular from 'angular';
 
+import './home.scss';
+
 import { HomeComponent } from './home.component';
 import { HomeService } from './home.service';
 import { PostCardComponent } from './postcard';

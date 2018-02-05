@@ -1,6 +1,8 @@
 import angular from 'angular';
 import ngRoute from 'angular-route';
 
+import './app.scss';
+
 import { ClientsModule } from './common/clients';
 import { HomeModule } from './home';
 
