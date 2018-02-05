@@ -1,4 +1,5 @@
 import { configHomeRoute } from './home/';
+import { configPostRoute } from './post/';
 
 /**
  * Configures the app's router
@@ -7,6 +8,7 @@ import { configHomeRoute } from './home/';
  */
 function configRoute($routeProvider) {
     configHomeRoute($routeProvider, { root: '/' });
+    configPostRoute($routeProvider, { root: '/post' });
 }
 
 configRoute.$inject = ['$routeProvider'];
