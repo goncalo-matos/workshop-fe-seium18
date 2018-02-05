@@ -5,12 +5,13 @@ import './app.scss';
 
 import { ClientsModule } from './common/clients';
 import { HomeModule } from './home';
+import { PostModule } from './post';
 
 import { config as appConfig } from './app.config';
 import { configRoute } from './route.config';
 import { configClients } from './clients.config';
 
-const appModule = angular.module('app', [ngRoute, ClientsModule, HomeModule]);
+const appModule = angular.module('app', [ngRoute, ClientsModule, HomeModule, PostModule]);
 
 appModule.config(appConfig);
 appModule.config(configRoute);
