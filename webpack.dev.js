@@ -5,7 +5,13 @@ module.exports = webpackMerge.smart(common, {
     entry: './src/index.js',
     devtool: 'eval-source-map',
     devServer: {
-        contentBase: './dist'
+        contentBase: './dist',
+        proxy: {
+            '/api': {
+                target: 'http://localhost:3000',
+                pathRewrite: { '^/api': '' }
+            }
+        }
     },
     module: {
         rules: [
