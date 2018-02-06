@@ -2,4 +2,4 @@
 2. [add-home-route](https://github.com/Atekon/workshop-fe-seium18/compare/add-angular...add-home-route)
 3. [add-home-service](https://github.com/Atekon/workshop-fe-seium18/compare/add-home-route...add-home-service)
 4. [add-home-ui](https://github.com/Atekon/workshop-fe-seium18/compare/add-home-service...add-home-ui)
-5. [add-home-ui](https://github.com/Atekon/workshop-fe-seium18/compare/add-home-ui...add-post-page)
+5. [add-post-page](https://github.com/Atekon/workshop-fe-seium18/compare/add-home-ui...add-post-page)
