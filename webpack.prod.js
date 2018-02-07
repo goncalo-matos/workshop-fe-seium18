@@ -1,3 +1,4 @@
+const path = require('path');
 const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
 const common = require('./webpack.common');
@@ -19,13 +20,19 @@ const commonChunksPlugin = new webpack.optimize.CommonsChunkPlugin({
     filename: 'vendor_[chunkhash].js',
     minChunks: Infinity
 });
+const moduleConcatenationPlugin = new webpack.optimize.ModuleConcatenationPlugin();
 
-const plugins = [extractSassPlugin, uglifyPlugin, loaderOptionsPlugin];
+const plugins = [extractSassPlugin, uglifyPlugin, loaderOptionsPlugin, commonChunksPlugin, moduleConcatenationPlugin];
 
 module.exports = webpackMerge.smart(common, {
     entry: {
-        bundle: ['./src/index.js'],
-        vendor: ['angular', 'angular-route']
+        vendor: ['angular', 'angular-route'],
+        bundle: ['./src/index.js']
+    },
+    resolve: {
+        alias: {
+            'proxy.config.js': path.resolve(__dirname, 'proxy.prod.config.js')
+        }
     },
     module: {
         rules: [

@@ -1,4 +1,5 @@
 import { BEClientProvider } from './common/clients/be-client.service';
+import routes from 'proxy.config.js';
 
 /**
  *
@@ -6,8 +7,8 @@ import { BEClientProvider } from './common/clients/be-client.service';
  */
 function configClients(bEClientProvider) {
     bEClientProvider.setEndpoints({
-        posts: '/api/posts',
-        post: '/api/post'
+        posts: routes.posts,
+        post: routes.post
     });
 }
 

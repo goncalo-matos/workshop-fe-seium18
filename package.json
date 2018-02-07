@@ -6,7 +6,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "serve": "webpack-dev-server --config webpack.dev.js --open",
-        "dist": "webpack --config webpack.prod.js",
+        "dist": "rm -rf dist && webpack --config webpack.prod.js",
         "precommit": "pretty-quick --staged"
     },
     "repository": {
